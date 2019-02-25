@@ -13,56 +13,56 @@
 </template>
 
 <style lang="scss">
-.container {
-  width: 80%;
-  margin: 0 auto;
-  padding: 1.3em;
-  display: grid;
-  grid-template-columns: 30% auto;
+  .container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 1.3em;
+    display: grid;
+    grid-template-columns: 30% auto;
 
-  a {
-    color: white;
-  }
-}
-
-header {
-  background: #009688;
-
-  .logo {
-    font-weight: bold;
+    a {
+      color: white;
+    }
   }
 
-  nav {
-    justify-self: right;
+  header {
+    background: #009688;
 
-    ul {
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
+    .logo {
+      font-weight: bold;
+    }
 
-      li {
-        float: left;
+    nav {
+      justify-self: right;
 
-        a {
-          padding: 1.5em;
-          text-transform: uppercase;
-          font-size: 0.8em;
-          @media (max-width: 340px) {
-            padding: 1em;
-          }
-          &:hover {
-            background: #26a69a;
+      ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+
+        li {
+          float: left;
+
+          a {
+            padding: 1.5em;
+            text-transform: uppercase;
+            font-size: 0.8em;
+            @media (max-width: 340px) {
+              padding: 1em;
+            }
+            &:hover {
+              background: #26a69a;
+            }
           }
         }
       }
     }
   }
-}
 
-@media (max-width: 340px) {
-  .container > a {
-    font-size: 16px;
+  @media (max-width: 340px) {
+    .container > a {
+      font-size: 16px;
+    }
   }
-}
 </style>
 

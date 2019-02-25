@@ -1,0 +1,8 @@
+{
+  "window.zoomLevel": 0,
+  "editor.fontSize": 12,
+  "editor.tabSize": 2,
+  "files.eol": "\r\n",
+  "vetur.format.scriptInitialIndent": true,
+  "vetur.format.styleInitialIndent": true
+}
