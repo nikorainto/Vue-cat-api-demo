@@ -1,7 +1,7 @@
 <template>
   <div>
-    <h1 v-if="loading">Loading...</h1>
-    <div v-if="!loading">
+    <h1 v-if="!breeds">No breeds to show. This is possibly a problem with the API</h1>
+    <div v-if="breeds">
       <h1 class="catlist_h1">Cat breeds:</h1>
       <div class="container_catlist">
         <div v-bind:key="breed.name" v-for="breed in breeds" class="container_catlistitem">
@@ -63,6 +63,6 @@
 
   export default {
     name: 'CatList',
-    props: ['breeds', 'loading'],
+    props: ['breeds'],
   };
 </script>

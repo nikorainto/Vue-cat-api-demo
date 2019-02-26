@@ -33,6 +33,15 @@
     padding: 2em;
   }
 
+  #nprogress .bar {
+    background: #616161 !important;
+    height: 6px !important;
+  }
+
+  #nprogress .peg {
+    box-shadow: none !important;
+  }
+
   @media (max-width: 767px) {
     body,
     html {
