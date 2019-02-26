@@ -12,8 +12,8 @@
   export default {
     data() {
       return {
-        breeds: [],
-        loading: true,
+        breeds: [] as Array<Object>,
+        loading: true as Boolean,
       };
     },
     name: 'Home',
@@ -30,7 +30,7 @@
       interface Options {
         name: string;
         id: string;
-        [propName: string]: any;
+        [key: string]: any;
       }
 
       const promises: Array<Object> = [];
@@ -65,8 +65,17 @@
           const data = val.data[0];
           parsedValues.push(data);
         });
-        this.breeds = parsedValues;
-        this.loading = false;
+
+        // For some reason I dont know yet, this is not working
+        interface Data {
+          breeds: Array<Object>;
+          loading: Boolean;
+          [key: string]: any;
+        }
+
+        const that: any = this;
+        that.breeds = parsedValues;
+        that.loading = false;
       });
     },
   };

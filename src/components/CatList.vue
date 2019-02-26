@@ -2,29 +2,56 @@
   <div>
     <h1 v-if="loading">Loading...</h1>
     <div v-if="!loading">
-      <h1>Cat breeds:</h1>
-      <div v-bind:key="breed.name" v-for="breed in breeds" class="container_catlist">
-        <a :href="breed.url" target="_blank" rel="noopener noreferrer">{{breed.breeds[0].name}}</a>
-        <br>
-        <label>{{breed.breeds[0].description}}</label>
-        <br>
-        <br>
+      <h1 class="catlist_h1">Cat breeds:</h1>
+      <div class="container_catlist">
+        <div v-bind:key="breed.name" v-for="breed in breeds" class="container_catlistitem">
+          <a
+            :href="breed.url"
+            target="_blank"
+            rel="noopener noreferrer"
+            :alt="breed.breeds[0].name"
+            title="Open image"
+          >{{breed.breeds[0].name}}</a>
+          <br>
+          <br>
+          <label>{{breed.breeds[0].description}}</label>
+          <br>
+          <br>
+        </div>
       </div>
     </div>
   </div>
 </template>
 
 <style lang="scss">
-  .container_catlist > a {
-    text-decoration: none;
-    color: white;
+  .catlist_h1 {
+    padding-left: 10px;
   }
 
-  .container_catlist > a:hover {
+  .container_catlist {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .container_catlistitem {
+    width: 25rem;
+    height: auto;
+    border: 2px solid lightgrey;
+    padding: 10px;
+    margin: 10px;
+  }
+
+  .container_catlistitem > a {
+    text-decoration: none;
+    color: white;
+    font-size: 24px;
+  }
+
+  .container_catlistitem > a:hover {
     text-decoration: underline;
   }
 
-  .container_catlist > label {
+  .container_catlistitem > label {
     text-decoration: none;
     color: lightgrey;
     font-size: 14px;
